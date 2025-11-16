@@ -1,5 +1,34 @@
-# Object file
-*.o
+# Sistem OS
+.DS_Store
+Thumbs.db
 
-# Ada Library Information
-*.ali
+# Folder cache & temporary
+tmp/
+temp/
+cache/
+
+# Composer (kalau tidak dipakai, abaikan bagian ini)
+vendor/
+composer.lock
+
+# Log file
+*.log
+
+# File upload (jika ada fitur upload)
+uploads/
+*.tmp
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / JS Tools (jika tidak pakai Node, boleh abaikan)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment / Config sensitif
+.env
+.env.*
