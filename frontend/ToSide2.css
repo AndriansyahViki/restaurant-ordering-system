@@ -1,0 +1,226 @@
+/* === SEARCH BOX === */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 8px 15px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.search-box:focus-within {
+    border-color: #4b5fe9;
+    box-shadow: 0 0 0 3px rgba(75, 95, 233, 0.1);
+    background: white;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+.search-icon {
+    color: #64748b;
+    margin-left: 8px;
+    font-size: 1rem;
+}
+
+/* === HEADER NOTIFICATION === */
+.header-notification {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #e2e8f0;
+    font-size: 1.2rem;
+}
+
+.header-notification:hover {
+    background: white;
+    border-color: #4b5fe9;
+    transform: scale(1.05);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+/* === NOTIFICATION POPUP === */
+.notification-popup {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    min-width: 300px;
+    z-index: 1000;
+    display: none;
+    border: 1px solid #e2e8f0;
+}
+
+.notification-popup.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.notification-popup::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+.notification-content {
+    text-align: center;
+}
+
+.notification-content h4 {
+    margin: 0 0 15px 0;
+    color: #1e293b;
+    font-size: 1.1rem;
+}
+
+.student-info {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #4b5fe9;
+}
+
+.student-info p {
+    margin: 5px 0;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+.student-info .name {
+    font-weight: bold;
+    color: #1e293b;
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === HEADER RIGHT LAYOUT === */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* === CART BADGE (Update yang sudah ada) === */
+.cart-badge {
+    background: linear-gradient(135deg, #4b5fe9 0%, #667eea 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(75, 95, 233, 0.3);
+}
+
+.cart-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(75, 95, 233, 0.4);
+}
+/* === NOTIFICATION POPUP - FIXED === */
+.notification-popup {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    min-width: 300px;
+    z-index: 1000;
+    display: none;
+    border: 1px solid #e2e8f0;
+    margin-top: 10px;
+}
+
+.notification-popup.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.notification-popup::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+/* Header notification container harus relative */
+.header-notification {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #e2e8f0;
+    font-size: 1.2rem;
+}
+

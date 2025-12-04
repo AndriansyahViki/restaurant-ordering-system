@@ -1,0 +1,471 @@
+/* <=========== BURGER BUTTON ===========> */
+
+.burger-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    z-index: 2000;
+    margin-right: 15px;
+}
+
+.burger-btn span {
+    width: 24px;
+    height: 3px;
+    background: #333;
+    border-radius: 5px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #4b5fe9;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: -260px;       /* default hidden */
+    top: 0;
+    transition: 0.3s ease;
+    z-index: 1500;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+    list-style: none;
+}
+
+.sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* BUTTON VISIBLE ON MOBILE */
+@media(max-width: 900px) {
+    .burger-btn {
+        display: flex;
+    }
+}
+
+
+/* === CLOSE SIDEBAR BUTTON === */
+.close-sidebar-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.2s ease;
+}
+
+.close-sidebar-btn:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* ==== OVERRIDE PAKSA FIX SIDEBAR ==== */
+
+#sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: -260px !important;
+    transition: 0.3s ease !important;
+    z-index: 9999 !important;
+}
+
+#sidebar.active {
+    left: 0 !important;
+}
+
+
+/* ===== FIX UNTUK BURGER BUTTON ===== */
+
+.burger-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;               /* jarak antara teks dan garis */
+    background: white;
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 2px solid #1d4ed8;   /* biru */
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.burger-text {
+    font-size: 22px;         /* ukuran besar */
+    font-weight: 700;
+    color: #1d4ed8;          /* biru */
+    white-space: nowrap;     /* cegah teks pecah */
+}
+
+/* garis burger */
+.burger-line {
+    width: 24px;
+    height: 3px;
+    background: #1d4ed8;     /* biru */
+    border-radius: 3px;
+}
+
+ .sidebar-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+/* === TOMBOL PESANAN SAYA (SUPER KEREN) === */
+
+.order-badge {
+    background: linear-gradient(135deg, #4f46e5 0%, #6574f7 100%);
+    color: white;
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+/* Animasi icon bergerak dikit saat hover */
+.order-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.45);
+}
+
+.order-badge:hover::before {
+    transform: scale(1.2) rotate(8deg);
+}
+
+/* Icon lebih rapi menggunakan before */
+.order-badge::before {
+    content: "📄";
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: 0.25s ease;
+}
+
+/* === AGAR SEJAJAR DENGAN CART === */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* User Info Styles */
+.user-header-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: default;
+}
+
+.user-header-avatar {
+    font-size: 1.2rem;
+}
+
+.user-header-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-header-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.user-header-role {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.user-header-role.admin {
+    background: #ff6b6b;
+    color: white;
+}
+
+.user-header-role.cashier {
+    background: #4ecdc4;
+    color: white;
+}
+
+/* Sidebar User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.user-avatar {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+}
+
+.user-details {
+    flex: 1;
+}
+
+.user-name {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.role-badge {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.role-badge.admin {
+    background: #ff6b6b;
+    color: white;
+}
+
+.role-badge.cashier {
+    background: #4ecdc4;
+    color: white;
+}
+
+.logout-btn {
+    font-size: 0.8rem;
+    color: #ff6b6b;
+    text-decoration: none;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar Menu Icons */
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-badge, .register-badge {
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-badge {
+    background: #007bff;
+    color: white;
+}
+
+.login-badge:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.register-badge {
+    background: #28a745;
+    color: white;
+}
+
+.register-badge:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* === PERBAIKAN SIDEBAR FOOTER === */
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Pastikan mulai dari kiri */
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    box-sizing: border-box; /* Pastikan padding tidak nambah width */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #667eea;
+    font-weight: bold;
+    flex-shrink: 0; /* Prevent avatar from shrinking */
+}
+
+.user-details {
+    flex: 1;
+    min-width: 0; /* Allow text truncation */
+}
+
+.user-name {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.user-role {
+    margin-bottom: 8px;
+}
+
+.role-badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.role-badge.admin {
+    background: #ff6b6b;
+    color: white;
+}
+
+.role-badge.cashier {
+    background: #4ecdc4;
+    color: white;
+}
+
+.logout-btn {
+    font-size: 0.8rem;
+    color: #ff6b6b;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+    color: #ff5252;
+}
+
+/* === PERBAIKAN UNTUK LOGOUT BUTTON === */
+.logout-btn {
+    font-size: 0.8rem;
+    color: #ff6b6b;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.logout-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+/* Pastikan user-details bisa diklik */
+.user-details {
+    position: relative;
+    z-index: 10;
+}
+
+/* Pastikan tidak ada elemen yang menutupi */
+.sidebar-footer {
+    position: relative;
+    z-index: 100;
+}
+

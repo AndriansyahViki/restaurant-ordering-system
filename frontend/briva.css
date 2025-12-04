@@ -1,0 +1,230 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* <========== STYLE UTAMA BODY ==========> */
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    /* <========== CONTAINER KARTU PEMBAYARAN ==========> */
+    .payment-container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        max-width: 500px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    /* <========== HEADER PEMBAYARAN ==========> */
+    .payment-header {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .payment-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .payment-header .order-code {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+    
+    /* <========== KONTEN UTAMA ==========> */
+    .payment-content {
+        padding: 30px;
+    }
+    
+    /* <========== SECTION NOMOR VA ==========> */
+    .va-section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .va-label {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 10px;
+    }
+    
+    .va-number {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #1e3c72;
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px dashed #1e3c72;
+        margin: 15px 0;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .va-number:hover {
+        background: #e3f2fd;
+        transform: scale(1.02);
+    }
+    
+    /* <========== SECTION JUMLAH PEMBAYARAN ==========> */
+    .amount-section {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    
+    .amount-label {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 5px;
+    }
+    
+    .amount-value {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #28a745;
+    }
+    
+    /* <========== SECTION INSTRUKSI ==========> */
+    .instructions {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .instructions h3 {
+        color: #856404;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    
+    .instructions ol {
+        padding-left: 20px;
+        color: #856404;
+    }
+    
+    .instructions li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+    
+    /* <========== INFORMASI BANK ==========> */
+    .bank-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 25px;
+        padding: 15px;
+        background: #e3f2fd;
+        border-radius: 10px;
+    }
+    
+    .bank-logo {
+        font-size: 2rem;
+    }
+    
+    .bank-details {
+        text-align: left;
+    }
+    
+    .bank-name {
+        font-weight: bold;
+        color: #1e3c72;
+    }
+    
+    /* <========== TOMBOL AKSI ==========> */
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    
+    .btn {
+        padding: 15px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .btn-copy {
+        background: #17a2b8;
+        color: white;
+    }
+    
+    .btn-copy:hover {
+        background: #138496;
+    }
+    
+    .btn-secondary {
+        background: #6c757d;
+        color: white;
+    }
+    
+    .btn-secondary:hover {
+        background: #5a6268;
+    }
+    
+    /* <========== STATUS INFO ==========> */
+    .status-info {
+        text-align: center;
+        padding: 15px;
+        background: #d4edda;
+        color: #155724;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #c3e6cb;
+    }
+    
+    /* <========== PESAN COPY SUKSES ==========> */
+    .copy-success {
+        text-align: center;
+        color: #28a745;
+        font-weight: bold;
+        margin-top: 10px;
+        display: none;
+    }
+    
+    /* <========== RESPONSIVE DESIGN ==========> */
+    @media (max-width: 480px) {
+        .payment-container {
+            margin: 10px;
+        }
+        
+        .payment-content {
+            padding: 20px;
+        }
+        
+        .va-number {
+            font-size: 1.5rem;
+            padding: 15px;
+        }
+        
+        .amount-value {
+            font-size: 1.5rem;
+        }
+    }
