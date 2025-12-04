@@ -1,0 +1,109 @@
+ .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .back-btn:hover {
+            background: #5a6268;
+        }
+        
+        .order-list {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .order-item {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .order-item:last-child {
+            border-bottom: none;
+        }
+        
+        .order-info {
+            flex: 1;
+        }
+        
+        .order-code {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .order-details {
+            margin-top: 5px;
+            color: #666;
+        }
+        
+        .status {
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status.completed {
+            background: #d1edff;
+            color: #004085;
+        }
+        
+        .status.cancelled {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .detail-link {
+            background: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .detail-link:hover {
+            background: #0056b3;
+        }
+        
+        .empty-orders {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        .empty-orders p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
